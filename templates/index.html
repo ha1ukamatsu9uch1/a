@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>戦う顔AIサイト</title>
+    <link rel="stylesheet" href="../static/css/top.css">
+</head>
+
+<body>
+    {% extends "layout.html" %}
+    <div class="first-block">
+        {% block content %}
+        <!-- 非表示にしたい部分
+        <h2>戦う顔ってなんなん？</h2>
+        <p>NanNan?</p>
+        <p>ISHIKAWA</p>
+        <p>出身</p>
+        <p>16打席連続 無安打記録</p>
+        <p>守備でもエラー</p>
+        <p>得</p>  -->
+        <ul>
+            <li><a href="{{ url_for('judge') }}">戦う顔してる？ </a></li>
+            <form action = "/judge" method="post" enctype="multipart/form-data">
+
+            <li><a href="{{ url_for('generate') }}">今なら 戦う顔に なれる！</a></li>
+            <form action = "/generate" method="post" enctype="multipart/form-data">
+
+            <li><a href="{{ url_for('about') }}">立浪に 怒られた</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+</body>
+</html>

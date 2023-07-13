@@ -1,0 +1,33 @@
+#second-block {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .info-title {
+    font-size: 60px;
+    font-family: serif;
+    margin-bottom: 20px;
+    color: #444;
+    text-align: center;
+  }
+  
+  .info-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #444;
+  
+    width: 30%;
+  }
+  
+  .font-small {
+    font-size: 15px;
+  }

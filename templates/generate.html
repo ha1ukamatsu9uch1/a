@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>生成AIサイト</title>
+    <link rel="stylesheet" href="../static/css/judge.css">
+</head>
+
+{% block content %}
+    <div class="enter_btn">
+        <h2>写真をアップロードしてください</h2>
+        <form action="/generate" method="post" enctype="multipart/form-data">
+            <p><input type="file" id="upload_file" name="upload_file" multiple="multiple" class="form-control"></p>
+            <p><input type="submit" value="送信" class="form-control btn btn-primary"></p>
+        </form>
+    </div>
+
+    <div class="main-content">
+        {% if generated_image %}
+            <img src="{{ url_for('generated_image', filename=generated_image) }}" alt="生成された戦う顔">
+        {% else %}
+            <p>まだ写真がアップロードされていません</p>
+        {% endif %}
+        <p>京田</p>
+        <p>１</p>
+        <p>内野手</p>
+        <p>1994年4月20日/７年目/右投左打</p>
+        <p>184㎝・90kg/石川県/5000万円</p>
+        <p>①青森山田高ー日本大ー中日ーDeNA②16年２位③新人王（17）④中日に所属した昨季は攻守両面で精彩を欠き、前半戦で2度の二軍落ちを経験。プロ入り後最少となる43試合の出場に終わる、悔しいシーズンを送った。新天地で再起をかける今季はプレーの安定感を高め、正遊撃手の座をつかみ取る。</p>
+        <p>年度別・通算の打者成績</p>
+  
+        <ul>
+            <li><a href="{{ url_for('index') }}">トップページに戻る</a></li>
+            <li><a href="{{ url_for('judge') }}">判定サイトへ</a></li>
+        </ul>
+    </div>
+{% endblock %}

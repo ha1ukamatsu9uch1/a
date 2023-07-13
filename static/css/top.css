@@ -1,0 +1,13 @@
+
+.first-block{
+    background-image: url("../image/first-back.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 550px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  

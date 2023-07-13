@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+<head>
+    <meta charset="UTF-8">
+    <title>判定AIサイト</title>
+    <link rel="stylesheet" href="../static/css/judge.css">
+</head>
+{% block content %}
+    <p>中継</p> 
+    <p>立浪監督 二軍降格理由について理由について</p> 
+    <div class="enter_btn">
+        <h2>写真をアップロード</h2>
+        <form action="{{ url_for('judge') }}" method="post" enctype="multipart/form-data">
+            <p><input type="file" id = "upload_file" name = "upload_file" multiple="multiple" class="form-control"></p>
+            <p><input type="submit" value="送信" class="form-control btn btn-primary"></p>
+        </form>
+    </div>
+
+    <p>{{ result }}戦う顔してない</p>
+
+    <ul>
+        <li><a href="{{ url_for('index') }}">トップページに戻る</a></li>
+        <li><a href="{{ url_for('generate') }}">生成サイトへ</a></li>
+    </ul>
+
+  
+
+{% endblock %}
